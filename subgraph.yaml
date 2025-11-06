@@ -6,11 +6,11 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: Factory
-    network: abstract
+    network: base-sepolia
     source:
-      address: '0x566d7510dee58360a64c9827257cf6d0dc43985e'
+      address: '0x1b4f8c650cd9ecf3c367cac6e7f16df13ed4f536'
       abi: Factory
-      startBlock: 46140
+      startBlock: 33344297
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.7
@@ -34,7 +34,7 @@ dataSources:
 templates:
   - kind: ethereum/contract
     name: Pair
-    network: abstract
+    network: base-sepolia
     source:
       abi: Pair
     mapping:
