@@ -4,21 +4,15 @@ import { Address, BigDecimal, BigInt } from '@graphprotocol/graph-ts/index'
 import { Bundle, Pair, Token } from '../types/schema'
 import { ADDRESS_ZERO, factoryContract, ONE_BD, UNTRACKED_PAIRS, ZERO_BD } from './helpers'
 
-const WETH_ADDRESS = '0x3439153eb7af838ad19d56e1571fbd09333c2809'
-const USDC_ADDRESS = '0x84a71ccd554cc1b02749b35d22f684cc8ec987e1'
-const USDC_WETH_PAIR = '0x22e77ffe8d3ee3a161f657f235807caf891f5638'
+const WETH_ADDRESS = '0x5d442b349590a6048Eb2dC0eC346cAA5F47A9ab5' // Unsupported Protocol
+const USDC_ADDRESS = '0x779Ded0c9e1022225f8E0630b35a9b54bE713736'
 
 export function getEthPriceInUSD(): BigDecimal {
-  let usdcPair = Pair.load(USDC_WETH_PAIR) // usdc is token0
-  if (usdcPair !== null) {
-    return usdcPair.token1Price
-  } else {
-    return ZERO_BD
-  }
+  return ONE_BD
 }
 
 // token where amounts should contribute to tracked volume and liquidity
-let WHITELIST: string[] = [WETH_ADDRESS, USDC_ADDRESS]
+let WHITELIST: string[] = [USDC_ADDRESS]
 
 const STABLECOINS: string[] = [USDC_ADDRESS]
 
