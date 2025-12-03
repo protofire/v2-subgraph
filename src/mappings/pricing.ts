@@ -4,8 +4,8 @@ import { Address, BigDecimal, BigInt } from '@graphprotocol/graph-ts/index'
 import { Bundle, Pair, Token } from '../types/schema'
 import { ADDRESS_ZERO, factoryContract, ONE_BD, UNTRACKED_PAIRS, ZERO_BD } from './helpers'
 
-const WETH_ADDRESS = '0x5d442b349590a6048Eb2dC0eC346cAA5F47A9ab5' // Unsupported Protocol
-const USDC_ADDRESS = '0x779Ded0c9e1022225f8E0630b35a9b54bE713736'
+const WETH_ADDRESS = '0x5574c55b7002A900CE7c0f197F5dcc8126bA8501' // Unsupported Protocol
+const USDC_ADDRESS = '0x78Cf24370174180738C5B8E352B6D14c83a6c9A9'
 
 export function getEthPriceInUSD(): BigDecimal {
   return ONE_BD
